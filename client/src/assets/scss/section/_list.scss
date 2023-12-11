@@ -1,0 +1,104 @@
+.list__wrap {
+
+    .list__header {
+        text-align: center;
+        background: linear-gradient(360deg, rgba(64, 64, 64, 0.958420868347339) 0%, rgba(0, 0, 0, 1) 100%);
+        color: var(--white);
+        padding: 100px 0;
+
+        h3 {
+            font-size: 30px;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+    }
+
+    .lists__wrap {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+        @media (max-width:1000px) {
+            grid-template-columns: repeat(3, 1fr);
+
+        }
+
+        @media (max-width:800px) {
+            grid-template-columns: repeat(2, 1fr);
+
+        }
+
+        @media (max-width:500px) {
+            grid-template-columns: repeat(1, 1fr);
+
+        }
+
+        >div {
+            border: 1px solid var(--black500);
+            padding: 24px 20px;
+            border-radius: 10px;
+            background-color: #fff;
+
+            .cate {
+                padding: 3px 8px;
+                background-color: #f3ffc6;
+                border-radius: 4px;
+                color: #09003a;
+                font-size: 14px;
+                display: inline-block;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+            &:nth-child(2n) {
+                .cate {
+                    background-color: #ffc2c2;
+                    color: #09003a;
+                }
+            }
+
+            .title {
+                font-size: 17px;
+                line-height: 1.6;
+                font-weight: 600;
+                margin-bottom: 5px;
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-position: under;
+                    color: #09003a;
+                }
+            }
+
+            .desc {
+                font-size: 15px;
+                color: #666;
+            }
+
+            .auth {
+                text-align: right;
+                margin-top: 10px;
+                font-size: 15px;
+                color: #666;
+                position: relative;
+                padding-right: 25px;
+
+                &::before {
+                    content: '';
+                    width: 20px;
+                    height: 20px;
+                    background-color: #ffadad;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
